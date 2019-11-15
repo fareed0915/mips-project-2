@@ -5,3 +5,12 @@
 .text
 
 main:
+  #asks for input and stores it
+
+    li $v0, 8
+    la $a0, data
+    li $a1, 1001
+    syscall
+    jal begin
+    j finish
+begin:
