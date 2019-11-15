@@ -55,3 +55,14 @@ gap:
     #checks to see for spaces 
     addi $t3,$t3, -1
     j doing            
+integer:
+  # checks to see for integers
+    ble $s0, 47, special
+    addi $t1, $t1, 1
+    addi $t2, $t2, 1    
+    
+    li $t5, 48
+    sub $s0, $s0, $t5
+    #add $s1, $s1, $s0
+    mul $t3, $t3, $t7
+    j during
