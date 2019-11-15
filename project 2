@@ -36,3 +36,11 @@ doing:
     bge $t2, 5, invalid
     bge $t3, 1, invalid
     j check
+check:
+   # checks the asziic values
+    beq $s0, 0, convert
+    ble $s0, 47, special
+    ble $s0, 57, integer
+    ble $s0, 85, capital
+    ble $s0, 117, lowercase
+    bge $s0, 118, special
