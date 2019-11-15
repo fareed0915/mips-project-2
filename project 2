@@ -88,3 +88,15 @@ lowercase:
     #add $s1, $s1, $s0
     mul $t3, $t3, $t7
     j doing    
+
+convert:
+# converts string info
+    la $t0, data
+    add $t0,$t0,$t6
+    lb $s0, ($t0)
+    addi $t2,$t2, -1
+    addi $t6, $t6, 1
+    blt $t2,0,done
+    move $t8, $t2
+    j sort
+sort:
