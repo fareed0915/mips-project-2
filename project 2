@@ -65,7 +65,7 @@ integer:
     sub $s0, $s0, $t5
     #add $s1, $s1, $s0
     mul $t3, $t3, $t7
-    j during
+    j doing
 capital:
 # checks to see for capitals
     ble $s0, 64, special
