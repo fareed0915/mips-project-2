@@ -155,4 +155,14 @@ finish:
     move $a0, $s1
     syscall
     #bge $t2,0,convert
-    j Exit    
+    j Exit  
+    invalid:
+# if user input is invalid
+    li $v0, 4
+    la $a0, output
+    syscall
+    
+    li $v0, 4
+    la $a0, notvalid
+    syscall
+    j Exit
