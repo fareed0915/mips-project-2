@@ -166,3 +166,8 @@ finish:
     la $a0, notvalid
     syscall
     j Exit
+    Exit:
+# exits the code
+    li $v0, 10
+    syscall
+    
