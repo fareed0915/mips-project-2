@@ -76,3 +76,15 @@ capital:
     sub $s0, $s0, $t5
     #add $s1, $s1, $s0
     mul $t3, $t3, $t7
+  j doing
+lowercase:
+#checks to see for lowercases
+    ble $s0, 96, special
+    addi $t1, $t1, 1
+    addi $t2, $t2, 1    
+    
+    li $t5, 87
+    sub $s0, $s0, $t5
+    #add $s1, $s1, $s0
+    mul $t3, $t3, $t7
+    j doing    
