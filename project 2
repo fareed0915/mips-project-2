@@ -129,3 +129,18 @@ lower:
     beq $t2, 0, combine
     li $t9, 31
     j exp
+exp:
+#Sorts through exponent
+    ble $t8, 1, combine
+    mul $t9, $t9, 31 
+    addi $t8, $t8, -1
+    j exp
+combine:
+    mul $s2, $t9, $s0
+    add $s1, $s1, $s2
+    #move $t4, $t9
+    li $t9, 1
+    #j finish
+    j convert
+    
+done: jr $ra    
