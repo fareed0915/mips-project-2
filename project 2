@@ -66,3 +66,13 @@ integer:
     #add $s1, $s1, $s0
     mul $t3, $t3, $t7
     j during
+capital:
+# checks to see for capitals
+    ble $s0, 64, special
+    addi $t1, $t1, 1
+    addi $t2, $t2, 1
+    
+    li $t5, 55
+    sub $s0, $s0, $t5
+    #add $s1, $s1, $s0
+    mul $t3, $t3, $t7
