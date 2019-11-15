@@ -51,3 +51,7 @@ special:
     beq $s0, 32, gap
     beq $s0, 10, convert
     j invalid
+gap:
+    #checks to see for spaces 
+    addi $t3,$t3, -1
+    j doing            
