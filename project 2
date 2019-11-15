@@ -113,3 +113,19 @@ num:
     beq $t2, 0, combine
     li $t9, 31
     j exp
+upper:
+#sorts through upper
+    li $t5, 55
+    sub $s0, $s0, $t5
+    li $t9, 1
+    beq $t2, 0, combine
+    li $t9, 31
+    j exp
+lower:
+#sorts through lower
+    li $t5, 87
+    sub $s0, $s0, $t5
+    li $t9, 1
+    beq $t2, 0, combine
+    li $t9, 31
+    j exp
